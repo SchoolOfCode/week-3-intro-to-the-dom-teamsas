@@ -45,3 +45,63 @@ console.log(ticket2a);
 let ticket2b = document.getElementById("itemList").childNodes;
 
 console.log(ticket2b);
+
+// 2c
+
+let ticket2c = document.getElementById("itemList").children;
+
+console.log(ticket2c);
+
+// 2d
+
+let ticket2d_firstChild = document.getElementById("itemList").firstElementChild;
+let ticket2d_lastChild = document.getElementById("itemList").lastElementChild;
+
+console.log(ticket2d_firstChild.textContent);
+console.log(ticket2d_lastChild.textContent);
+
+// TICKET 3
+// 3a
+
+let ticket3a = (document.getElementById("title").style.cssText =
+  "color: red; font-size: 30px");
+
+// 3b
+
+let newPara = document.createElement("p");
+let newNode = document.createTextNode("This is a dynamically added paragraph.");
+newPara.appendChild(newNode);
+
+let newElement = document.querySelector("body");
+newElement.appendChild(newPara);
+
+// 3c
+
+document.querySelector(".content").innerHTML =
+  "This paragraph has been updated using JavaScript";
+
+// 3d
+
+let ticket3d = document.querySelector(".highlight");
+
+ticket3d.setAttribute("title", "Hover over me!");
+
+// 3e
+
+let ticket3e = document.getElementById("itemList");
+
+ticket3e.classList.add("styled-list");
+
+let banana = document.querySelectorAll("li");
+
+console.log(banana[1]);
+
+banana[1].classList.remove("list-item");
+
+// 3f
+
+let date = document.querySelectorAll("li")[3];
+
+console.log(date);
+
+date.remove();
